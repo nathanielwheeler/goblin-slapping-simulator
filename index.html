@@ -7,35 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="game.css">
 
     <title>Goblin Slapping Simulator!!!1</title>
 </head>
 
-<body class="bg-dark text-light">
+<body class="text-light">
 
     <div class="container-fluid">
         <div class="row">
+            <div class="col-12 text-center">
+                <h2>SlapCraft MCXI: Requiem of Slaps</h2>
+            </div>
+        </div>
 
-            <div class="col-6 justify-content-left" id="player-element">
 
+
+        <div class="row">
+
+            <div class="col-6 d-flex justify-content-start">
+                <div id="player-card" class="card bg-dark text-left">
+
+                    <h3 class="card-header">Slapmaster, master of slaps</h3>
+
+                    <!-- <img src="#" alt="" class="card-img-top"> -->
+
+                    <div class="card-body">
+                        <div class="btn-group" role="group" aria-label="Attacks">
+                            <button onclick="slap('slap')" type="button" class="btn btn-secondary">Slap</button>
+                            <button onclick="slap('backslap')" type="button" class="btn btn-secondary">Backslap</button>
+                            <button onclick="slap('megaslap')" type="button" class="btn btn-secondary">Megaslap</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
 
 
-            <div class="col-6 justify-content-right" id="enemy-element">
+            <div class="col-6 d-flex justify-content-end">
+                <div id="enemy-card" class="card bg-dark text-right">
 
-                <div class="card bg-dark text-right">
-                    <h1 class="card-header">gerblin</h1>
-                    <img class="card-img-top" src="https://i.ibb.co/j8Xyz8p/UNADJUSTEDNONRAW-mini-8.jpg"
-                        alt="gerblin wiht sowrd">
+                    <h3 class="card-header">Tenderpalm, weak of wrist</h3>
+
+                    <!-- <img class="card-img-top" src="https://i.ibb.co/j8Xyz8p/UNADJUSTEDNONRAW-mini-8.jpg" 
+                        alt="gerblin wiht sowrd">-->
+
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary" onclick="slap('slap')">slap 'im!</button>
-                        <button type="button" class="btn btn-secondary" onclick="slap('kick')">givim le kikc!</button>
-                        <button type="button" class="btn btn-primary" onclick="slap('punch')">a PUNCH!!!1</button>
+
                     </div>
 
                 </div>
-
             </div>
 
             <!-- <div class="col-12 text-center">
