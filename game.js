@@ -16,21 +16,21 @@ let character = {
                 name: "Palm Oil",
                 equipped: false,
                 modBase: 1.5,
-                modType: "player.attacks.slap",
+                tagName: "#palm-oil",
                 description: "Hand oil that add a little sting to your slaps.  Increases the power of normal slaps.",
             },
             cheekGuards: {
                 name: "Cheek Guards",
                 equipped: false,
                 modBase: 0.5,
-                modType: "enemy.attack",
+                tagName: "#cheek-guards",
                 description: "Little pillows to protect against slaps.  Increases slap defense.",
             },
             amuletOfTheSlapmaster: {
                 name: "Amulet of the Slapmaster",
                 equipped: false,
                 modBase: 1111,
-                modType: "player.attacks.megaslap",
+                tagName: "#amulet-of-the-slapmaster",
                 description: "This necklace contains the energy of every Master of Slaps. Given to Slapmaster by his father, it is all he has left of his family.  Increases megaslap power.",
             },
         },
@@ -50,8 +50,11 @@ let character = {
 
 function equip(item) {
     let equippedItem = character.player.items[item]
-    let modTarget = equippedItem.modType
-    character[modTarget] *= equippedItem.modBase
+    let itemTag = equippedItem.tagName
+    equippedItem.equipped = true
+    document.querySelector(`${itemTag}`) = `<h3>Palm Oil</h3><p></p><button onclick="equip('palmOil')" type="button" class="btn btn-secondary">Equip</button>`
+
+
 }
 
 function slap(slapType) {
