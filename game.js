@@ -22,7 +22,7 @@ let character = {
             cheekGuards: {
                 name: "Cheek Guards",
                 equipped: false,
-                modBase: 5,
+                modBase: 0.5,
                 modType: "enemy.attack",
                 description: "Little pillows to protect against slaps.  Increases slap defense.",
             },
@@ -46,6 +46,12 @@ let character = {
         attack: 10,
         description: "An infamous criminal mastermind responsible for the deaths of Slapmaster's family."
     },
+}
+
+function equip(item) {
+    let equippedItem = character.player.items[item]
+    let modTarget = equippedItem.modType
+    character[modTarget] *= equippedItem.modBase
 }
 
 function slap(slapType) {
