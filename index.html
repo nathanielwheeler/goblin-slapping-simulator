@@ -30,9 +30,17 @@
 
                     <h3 class="card-header">Slapmaster, master of slaps</h3>
 
-                    <!-- <img src="#" alt="" class="card-img-top"> -->
+                    <img src="https://i.ibb.co/KxWm3YT/IMG-0996.jpg" alt="" class="card-img-top">
 
                     <div class="card-body">
+
+                        <div class="progress" id="player-health">
+                            <div style="width: 100%" class="progress-bar" role="progressbar" aria-valuenow="1000"
+                                aria-valuemin="0" aria-valuemax="1000">1000</div>
+                        </div>
+
+                        <br>
+
                         <div class="btn-group" role="group" aria-label="Attacks">
                             <button onclick="slap('slap')" type="button" class="btn btn-secondary">Slap</button>
                             <button onclick="slap('backslap')" type="button" class="btn btn-secondary">Backslap</button>
@@ -41,6 +49,7 @@
                     </div>
 
                 </div>
+
             </div>
 
 
@@ -50,11 +59,19 @@
 
                     <h3 class="card-header">Tenderpalm, weak of wrist</h3>
 
-                    <!-- <img class="card-img-top" src="https://i.ibb.co/j8Xyz8p/UNADJUSTEDNONRAW-mini-8.jpg" 
-                        alt="gerblin wiht sowrd">-->
+                    <img class="card-img-top" src="https://i.ibb.co/F3Q63Wh/IMG-0997.jpg" alt="tenderpalm">
 
                     <div class="card-body">
+                        <div class="progress" id="enemy-health">
+                            <div style="width: 100%" class="progress-bar" role="progressbar" aria-valuenow="1000"
+                                aria-valuemin="0" aria-valuemax="200">200</div>
+                        </div>
 
+                        <br>
+
+                        <p id="enemy-description">
+                            An infamous criminal mastermind responsible for the deaths of Slapmaster's family.
+                        </p>
                     </div>
 
                 </div>
@@ -79,6 +96,22 @@
                     <button type="button" class="btn btn-secondary" onclick="slap('kick')">givim le kikc!</button>
                     <button type="button" class="btn btn-primary" onclick="slap('punch')">a PUNCH!!!1</button>
                 </div> -->
+        </div>
+        <div class="row">
+            <div id="player-items" class="card bg-dark text-left">
+                <div class="card-body">
+                    <h3>Palm Oil</h3>
+                    <p></p>
+                    <button onclick="equip('palmOil')" type="button" class="btn btn-secondary">Equip</button>
+                    <h3>Cheek Guards</h3>
+                    <p></p>
+                    <button onclick="equip('cheekGuards')" type="button" class="btn btn-secondary">Equip</button>
+                    <h3>Amulet of the Slapmaster</h3>
+                    <p></p>
+                    <button onclick="equip('amuletOfTheSlapmaster')" type="button"
+                        class="btn btn-secondary">Equip</button>
+                </div>
+            </div>
         </div>
     </div>
     </div>
